@@ -7,8 +7,6 @@ import com.vtence.molecule.routing.DynamicRoutes;
 import java.io.IOException;
 import java.net.URI;
 
-import static com.vtence.molecule.http.MimeTypes.JSON;
-
 public class Yose {
 
     private final WebServer server;
@@ -21,11 +19,8 @@ public class Yose {
         final Gson gson = new Gson();
 
         server.start(new DynamicRoutes() {{
-
-            get("/ping").to((request, response) -> response.contentType(JSON).body(gson.toJson(new Pong())));
-
             get("/").to((request, response) -> response.body("Hello Yose"));
-
+            get("/ping").to(new Ping(gson)::pong);
         }});
     }
 
@@ -35,10 +30,6 @@ public class Yose {
 
     public void stop() throws IOException {
         server.stop();
-    }
-
-    public static class Pong {
-        public final boolean alive = true;
     }
 
     private static final int PORT = 0;
