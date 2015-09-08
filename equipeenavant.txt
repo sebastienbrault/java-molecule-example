@@ -2,6 +2,6 @@ PBI :
 
 + Avoir accès à la partie du joueur.					100
 + Connaître les participants par équipe (portfolio).	 85
-+ Pratiquer le TDD.										150
++ Pratiquer le TDD. (Prime factor - Power of two)		150
 + Partager le code (share start).						 70
 + Pratiquer le ALM.										120
