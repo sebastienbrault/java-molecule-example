@@ -12,8 +12,8 @@ public class Yose {
     private final WebServer server;
 
     public Yose(int port) {
-        //this.server = WebServer.create("127.0.0.1",port);
-    	this.server = WebServer.create(port);
+        this.server = WebServer.create("localhost",port);
+    	//this.server = WebServer.create(port);
     }
 
     public void start() throws IOException {
