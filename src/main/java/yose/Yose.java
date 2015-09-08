@@ -19,11 +19,26 @@ public class Yose {
         final Gson gson = new Gson();
 
         server.start(new DynamicRoutes() {{
-            get("/").to((request, response) -> response.body("Hello Yose"));
+           // get("/").to((request, response) -> response.body(buildHomePage()));
+            get("/").to((request, response) -> response.body(buildHomePage()));
+
             get("/ping").to(new Ping(gson)::pong);
         }});
     }
 
+    public String buildHomePage() {
+    	String htmlBody = "<html><head></head><body>";
+    	htmlBody += "Equipe en avant à gauche / à droite";
+    	htmlBody += "<br/><a id=\"contact-me-link\" href=\"contactme\">Contactez en avant.</a>";
+    	htmlBody += "<br/>Best team members:";
+    	htmlBody += "<br/>Maïté";
+    	htmlBody += "<br/>Stéphane";
+    	htmlBody += "<br/>Yanick";
+    	htmlBody += "<br/>Sébastien";
+    	htmlBody += "</body>";
+    	return htmlBody;
+    }
+    
     public URI uri() {
         return server.uri();
     }
