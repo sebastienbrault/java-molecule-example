@@ -12,8 +12,14 @@ public class Yose {
     private final WebServer server;
 
     public Yose(int port) {
-        this.server = WebServer.create("localhost",port);
-    	//this.server = WebServer.create(port);
+    	if (System.getProperty("os.name").toLowerCase().contains("win"))
+    	{
+            this.server = WebServer.create("localhost",port);
+    	}
+    	else
+    	{
+        	this.server = WebServer.create(port);
+    	}
     }
 
     public void start() throws IOException {
