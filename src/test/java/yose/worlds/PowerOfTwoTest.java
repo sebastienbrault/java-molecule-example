@@ -6,6 +6,7 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 import yose.PowerOfTwo;
+import yose.PowerOfTwoBean;
 
 public class PowerOfTwoTest {
 

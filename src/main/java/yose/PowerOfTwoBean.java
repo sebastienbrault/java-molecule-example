@@ -1,4 +1,4 @@
-package yose.worlds;
+package yose;
 
 /**
  * Bean pour la transformation en Gson pour le world PowerOfTwo

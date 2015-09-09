@@ -1,6 +1,8 @@
 package yose;
 
 
+import static com.vtence.molecule.http.MimeTypes.JSON;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,9 +10,7 @@ import com.google.gson.Gson;
 import com.vtence.molecule.Request;
 import com.vtence.molecule.Response;
 
-
-
-import yose.worlds.PowerOfTwoBean;
+import yose.Ping.Pong;
 
 public class PowerOfTwo {
 
@@ -28,7 +28,7 @@ public class PowerOfTwo {
             return;
         }
         int number = Integer.parseInt( numbers.get(0));
-        return;
+        response.contentType(JSON).body(powerOfTwoController(number));
     }
 
 
