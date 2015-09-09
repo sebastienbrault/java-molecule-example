@@ -1,7 +1,10 @@
 package yose;
 import java.util.ArrayList;
 
+import com.google.gson.Gson;
+
 public class PowerOfTwo {
+	
 
 	public static Integer[] powerOfTwo(int i) {
 		ArrayList<Integer> result = new ArrayList<Integer>();
@@ -16,9 +19,9 @@ public class PowerOfTwo {
 		return result.toArray(new Integer[result.size()]);
 	}
 
-	public static String toJSON() {
-		// TODO Auto-generated method stub
-		return "{\"number\":}";
-	}
+//	public static Gson toJSON() {
+//		// TODO Auto-generated method stub
+//		return "{\"number\":}";
+//	}
 
 }

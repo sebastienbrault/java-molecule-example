@@ -3,6 +3,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import com.google.gson.Gson;
+
 import yose.PowerOfTwo;
 
 public class PowerOfTwoTest {
@@ -33,8 +35,9 @@ public class PowerOfTwoTest {
 	}
 	
 	@Test
-	public void testThatReturnsJSONContainingNumberField() {
-		String result = PowerOfTwo.toJSON();
+	public void testThatReturnsJSONFromBean() {
+		PowerOfTwoBean param = new PowerOfTwoBean(16,new Integer[]{2,2,2,2});
+		Gson result = PowerOfTwo.toJSON(param);
 		assertTrue(result.matches("\\{.*\"number\":.*\\}"));
 	}
 
