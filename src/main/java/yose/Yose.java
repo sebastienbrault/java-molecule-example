@@ -39,10 +39,10 @@ public class Yose {
     	htmlBody += "Equipe en avant à gauche / à droite";
     	htmlBody += "<br/><a id=\"contact-me-link\" href=\"contactme\">Contactez en avant.</a>";
     	htmlBody += "<br/>Best team members:";
-    	htmlBody += "<br/>Maïté";
-    	htmlBody += "<br/>Stéphane";
-    	htmlBody += "<br/>Yanick";
-    	htmlBody += "<br/>Sébastien";
+    	htmlBody += "<br/>Maïté Cartiny";
+    	htmlBody += "<br/>Stéphane Bouget";
+    	htmlBody += "<br/>Yannick Cornaille";
+    	htmlBody += "<br/>Sébastien Brault";
     	htmlBody += "</body>";
     	return htmlBody;
     }
