@@ -12,7 +12,14 @@ public class Yose {
     private final WebServer server;
 
     public Yose(int port) {
-        this.server = WebServer.create("localhost",port);
+    	if (System.getProperty("os.name").toLowerCase().contains("win"))
+    	{
+            this.server = WebServer.create("localhost",port);
+    	}
+    	else
+    	{
+        	this.server = WebServer.create(port);
+    	}
     }
 
     public void start() throws IOException {
@@ -28,6 +35,7 @@ public class Yose {
 
     public String buildHomePage() {
     	String htmlBody = "<html><head></head><body>";
+    	htmlBody += "Hello Yose";
     	htmlBody += "Equipe en avant à gauche / à droite";
     	htmlBody += "<br/><a id=\"contact-me-link\" href=\"contactme\">Contactez en avant.</a>";
     	htmlBody += "<br/>Best team members:";
