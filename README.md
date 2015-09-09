@@ -4,6 +4,12 @@
 java-molecule-example
 =====================
 
+## Welcome
+
+This is an implementation to play whith [Yose the game](http://yosethegame.com)
+
+## Introduction
+
 A an example to get you started to Yose the Game using [Molecule](http://vtence.com/molecule).
 
 It passes the first two challenges.
