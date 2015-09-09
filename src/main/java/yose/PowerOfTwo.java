@@ -1,5 +1,5 @@
 package yose;
-import static com.vtence.molecule.http.MimeTypes.JSON;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,16 +8,19 @@ import com.google.gson.Gson;
 import com.vtence.molecule.Request;
 import com.vtence.molecule.Response;
 
-import yose.Ping.Pong;
+
+
+import yose.worlds.PowerOfTwoBean;
 
 public class PowerOfTwo {
+
+	private final Gson gson;
+
+	public PowerOfTwo() {
+		super();
+		this.gson = new Gson();
+	}
 	
-	
-
-    public PowerOfTwo(Gson gson) {
-
-    }
-
     public void initPage(Request request, Response response) throws Exception {
         List<String> numbers = request.parameters("number");
         if (numbers == null || numbers.size() == 0) {
@@ -29,12 +32,12 @@ public class PowerOfTwo {
     }
 
 
-	public static Integer[] powerOfTwo(int i) {
+	public Integer[] powerOfTwo(int i) {
 		ArrayList<Integer> result = new ArrayList<Integer>();
 		int res = i;
 		do {
 			if (res % 2 != 0) {
-				throw new IllegalArgumentException("Not a Power Of Two"); 
+				throw new IllegalArgumentException("Not a Power Of Two");
 			}
 			res = res / 2;
 			result.add(2);
@@ -42,9 +45,14 @@ public class PowerOfTwo {
 		return result.toArray(new Integer[result.size()]);
 	}
 
-	public static String toJSON() {
-		// TODO Auto-generated method stub
-		return "{\"number\":}";
+	public String toJSON(PowerOfTwoBean param) {
+		return gson.toJson(param);
+	}
+
+	public String powerOfTwoController(int i) {
+		Integer[] result = powerOfTwo(i);
+		PowerOfTwoBean potb = new PowerOfTwoBean(i, result);
+		return toJSON(potb);
 	}
 
 }
