@@ -1,14 +1,12 @@
 [![Travis Build Status](https://travis-ci.org/yosethegame/java-molecule-example.svg?branch=master)](https://travis-ci.org/yosethegame/java-molecule-example)
 
+Welcome
+=======
+
+This is an implementation to play with [Yose the game](http://yosethegame.com)
 
 java-molecule-example
 =====================
-
-## Welcome
-
-This is an implementation to play whith [Yose the game](http://yosethegame.com)
-
-## Introduction
 
 A an example to get you started to Yose the Game using [Molecule](http://vtence.com/molecule).
 
