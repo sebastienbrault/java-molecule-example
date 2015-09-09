@@ -15,4 +15,11 @@ public class HomePage {
         browser.assertPageSource(containsString(message));
         return this;
     }
+
+    public HomePage checkCreatorNames(String name)
+    {
+        browser.assertPageSource(containsString(name));
+        return this;
+    }
+
 }

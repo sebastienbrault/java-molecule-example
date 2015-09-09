@@ -34,6 +34,12 @@ public class StartWorld {
     }
 
     @Test
+    public void testForContacts() throws IOException {
+        yose.home().checkCreatorNames("Maïté Cartiny");
+        yose.home().checkCreatorNames("Stéphane Bouget");
+    }
+
+    @Test
     public void firstWebServiceChallenge() throws IOException {
         response = request.get("/ping");
 
