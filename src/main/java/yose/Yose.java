@@ -44,6 +44,7 @@ public class Yose {
     	htmlBody += "<br/>Stéphane Bouget";
     	htmlBody += "<br/>Yannick Cornaille";
     	htmlBody += "<br/>Sébastien Brault";
+    	htmlBody += "<img src=\"https://lh3.googleusercontent.com/-2CKfDaLHf5w/VfA-ciOkyMI/AAAAAAAACqo/s95QE8zgLiM/w852-h1136/2015%2B-%2B1\"/>";
     	htmlBody += "</body>";
     	return htmlBody;
     }
