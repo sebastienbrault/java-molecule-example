@@ -1,9 +1,9 @@
 [![Travis Build Status](https://travis-ci.org/yosethegame/java-molecule-example.svg?branch=master)](https://travis-ci.org/yosethegame/java-molecule-example)
 
-Welcome
-=======
+Welcome to YoseTheGame
+======================
 
-This is an implementation to play with [Yose the game](http://yosethegame.com)
+This is an implementation to play with [YoseTheGame](http://yosethegame.com)
 
 java-molecule-example
 =====================
