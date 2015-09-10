@@ -46,6 +46,12 @@ public class StartWorld {
     }
     
     @Test
+    public void testForPingURL() throws IOException {
+        yose.home().checkPingURL("ping-challenge-link");
+        yose.home().checkPingURL("http://equipeenavantgauche.herokuapp.com/ping");
+    }
+    
+    @Test
     public void firstWebServiceChallenge() throws IOException {
         response = request.get("/ping");
 
