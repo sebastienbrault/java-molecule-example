@@ -10,7 +10,7 @@ java-molecule-example
 
 A an example to get you started to Yose the Game using [Molecule](http://vtence.com/molecule).
 
-It passes the first two challenges..
+It passes the first two challenges.
 
 ## Get ready
 
