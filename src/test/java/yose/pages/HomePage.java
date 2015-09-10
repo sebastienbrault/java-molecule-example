@@ -27,4 +27,10 @@ public class HomePage {
         return this;		
 	}
 
+	public HomePage checkPingURL(String string) {
+        browser.assertPageSource(containsString(string));
+        return this;		
+	}
+
+
 }
