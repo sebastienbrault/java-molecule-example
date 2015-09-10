@@ -40,6 +40,12 @@ public class StartWorld {
     }
 
     @Test
+    public void testForSourceURL() throws IOException {
+        yose.home().checkSrcURL("repository-link");
+        yose.home().checkSrcURL("https://github.com/sebastienbrault/java-molecule-example");
+    }
+    
+    @Test
     public void firstWebServiceChallenge() throws IOException {
         response = request.get("/ping");
 

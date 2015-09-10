@@ -22,4 +22,9 @@ public class HomePage {
         return this;
     }
 
+	public HomePage checkSrcURL(String string) {
+        browser.assertPageSource(containsString(string));
+        return this;		
+	}
+
 }
