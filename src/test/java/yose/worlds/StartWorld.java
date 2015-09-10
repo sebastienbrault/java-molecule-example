@@ -52,6 +52,14 @@ public class StartWorld {
     }
     
     @Test
+    public void testHomePageContentType() throws IOException {
+        response = request.get("/");
+
+        assertThat(response).isOK()
+                            .hasContentType("text/html");
+    }
+    
+    @Test
     public void firstWebServiceChallenge() throws IOException {
         response = request.get("/ping");
 
