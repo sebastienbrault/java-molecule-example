@@ -35,7 +35,8 @@ public class Yose {
     }
 
     public String buildHomePage() {
-    	String htmlBody = "<html><head></head><body>";
+    	String htmlBody = "<!doctype html>"; 
+    	htmlBody += "<html><head></head><body>";
     	htmlBody += "Hello Yose";
     	htmlBody += "Equipe en avant à gauche / à droite";
     	htmlBody += "<br/><a id=\"contact-me-link\" href=\"contactme\">Contactez en avant.</a>";
